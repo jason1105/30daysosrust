@@ -40,6 +40,7 @@ install :
 clean :
 	-$(DEL) ipl.bin
 	-$(DEL) ipl.lst
+	-$(DEL) meiyouos.img
 
 src_only :
 	$(MAKE) clean

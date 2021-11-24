@@ -41,8 +41,8 @@ entry:
 		MOV		CH,0			; シリンダ0
 		MOV		DH,0			; ヘッド0
 		MOV		CL,2			; セクタ2
-read_new_sector:
-        MOV     SI,0            ; 重?次数
+readloop:
+        MOV     SI,0            ; retry count
 retry:
 		MOV		AH,0x02			; AH=0x02 : ディスク読み込み
 		MOV		AL,1			; 1セクタ
@@ -50,21 +50,30 @@ retry:
 		MOV		DL,0x00			; Aドライブ
 		INT		0x13			; ディスクBIOS呼び出し
 		JNC		next            ; read successfully
-        ADD     SI,1            ; 重?次数加1
-        CMP     SI,5            ; if 重?次数 >= 5, ???
+        ADD     SI,1            ; add retry count
+        CMP     SI,5            ; if retry count >= 5 then error
         JAE     error           ;
-        MOV     AH,0X00         ; else 重置磁?
+        MOV     AH,0X00         ; else reset Floppy
         MOV     DL,0x00         ;
-        JMP     retry           ; 重新?取
+        INT     0x13
+        JMP     retry           ; 
 
 next:
-		MOV		AX,ES           ; 地址增加512, 即0x200, ES 是段寄存器
-		ADD     AX,0x20         ; 段寄存器需要 * 0x10, 所以?里是0x20
-        MOV     ES,AX           ; 拐个弯更新了ES
-        ADD     CL,1            ; ?取下一个扇区
-        CMP     CL,18           ; if 扇区 <= 18 ????
-        JBE      read_new_sector  ; 
-        ;JMP     fin            ; else ?束
+		MOV		AX,ES           ; adding 512 to address for next loading, namely 0x200
+		ADD     AX,0x20         ; ES is segment register that will * 10 for using
+        MOV     ES,AX           ; updating ES. 
+        ADD     CL,1            ; prepare to loading next sector
+        CMP     CL,18           ; if sector <= 18 then load
+        JBE     readloop        ;   then continue read next sector
+        MOV     CL,1            ; else read next header
+        ADD     DH,1            ;   move header
+        CMP     DH,2            ; if header < 2
+        JB      readloop        ;   then continue read next header
+        MOV     DH,0            ; else reset header  to 0
+        ADD     CH,1            ;   add 1 to cylinder
+        CMP     CH,9            ; if cylinder not grater than 9
+        JBE     readloop        ;   then continue read next cylinder
+        JMP     fin             ; else finished
 
 ; 読み終わったけどとりあえずやることないので寝る
 
