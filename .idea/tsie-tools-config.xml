@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="tsie-tools-config">
+    <option name="dbInfoList">
+      <list>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectivity" value="true" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+        <DBInformation>
+          <option name="connMsg" value="Database connection established" />
+          <option name="connectionName" value="@localhost" />
+          <option name="connectivity" value="true" />
+          <option name="database" value="weather_service" />
+          <option name="dbType" value="MYSQL5" />
+          <option name="host" value="127.0.0.1" />
+          <option name="password" value="root" />
+          <option name="port" value="13306" />
+          <option name="username" value="root" />
+        </DBInformation>
+      </list>
+    </option>
+  </component>
+</project>
